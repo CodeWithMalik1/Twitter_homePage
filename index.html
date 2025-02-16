@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://abs.twimg.com/favicons/twitter-pip.3.ico">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="./css/output.css">
+    <style>
+        /* Custom CSS for hiding the scrollbar */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            /* For Internet Explorer and Edge */
+            scrollbar-width: none;
+            /* For Firefox */
+        }
+    </style>
+    <title>Twitter[X] Home Clone[TailwindCSS]</title>
+</head>
+
+<body class=" bg-black text-white ">
+
+    <div class="flex  mx-auto my-4">
+        <div class="first w-16 md:w-[70%] ">
+
+            <div class="sidebar flex md:items-end  flex-col sticky top-0">
+                <div class="logo invert my-4 self-start mx-2 md:mx-16">
+
+                    <svg viewBox="0 0 24 24" aria-hidden="true"
+                        class="w-8 m-auto r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-1plcrui r-lrvibr r-lrsllp r-1nao33i r-16y2uox r-8kz0gk">
+                        <g>
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                            </path>
+                        </g>
+                    </svg>
+
+                </div>
+                <ul class="flex flex-col text-2xl space-y-3 md:px-11 ml-11 w-full  ">
+                    <li
+                        class="flex md:justify-start items-center gap-3 justify-center  mr-3 md:w-fit  hover:bg-gray-900 hover:font-semiboldbold hover:cursor-pointer px-5 py-1 hover:rounded-full">
+                        <span class="text-2xl material-symbols-outlined"> home </span> <span
+                            class="text-xl  hidden md:block">Home</span>
+                    </li>
+                    <li
+                        class="flex md:justify-start items-center gap-3 justify-center  mr-3 md:w-fit  hover:bg-gray-900 hover:font-semiboldbold hover:cursor-pointer px-5 py-1 hover:rounded-full">
+                        <span class="text-2xl material-symbols-outlined"> search </span><span
+                            class="text-xl hidden md:block">Explore</span>
+                    </li>
+                    <li
+                        class="flex md:justify-start items-center gap-3 justify-center  mr-3 md:w-fit  hover:bg-gray-900 hover:font-semiboldbold hover:cursor-pointer px-5 py-1 hover:rounded-full">
+                        <span class="text-3xl material-symbols-outlined"> notifications </span><span
+                            class="text-xl hidden md:block">Notifications</span>
+                    </li>
+                    <li
+                        class="flex md:justify-start items-center gap-3 justify-center  mr-3 md:w-fit  hover:bg-gray-900 hover:font-semiboldbold hover:cursor-pointer px-5 py-1 hover:rounded-full">
+                        <span class="text-3xl material-symbols-outlined"> bolt </span><span
+                            class="text-xl  hidden md:block">Grok</span>
+                    </li>
+                    <li
+                        class="flex md:justify-start items-center gap-3 justify-center  mr-3 md:w-fit  hover:bg-gray-900 hover:font-semiboldbold hover:cursor-pointer px-5 py-1 hover:rounded-full">
+                        <span class="text-2xl material-symbols-outlined"> lists </span><span
+                            class="text-xl hidden md:block">Lists</span>
+                    </li>
+                    <li
+                        class="flex md:justify-start items-center gap-3 justify-center  mr-3 md:w-fit  hover:bg-gray-900 hover:font-semiboldbold hover:cursor-pointer px-5 py-1 hover:rounded-full">
+                        <span class="text-3xl material-symbols-outlined"> bookmarks </span><span
+                            class="text-xl hidden md:block">Bookmarks</span>
+                    </li>
+                    <li
+                        class="flex md:justify-start items-center gap-3 justify-center  mr-3 md:w-fit  hover:bg-gray-900 hover:font-semiboldbold hover:cursor-pointer px-5 py-1 hover:rounded-full">
+                        <span class="text-2xl material-symbols-outlined"> Group </span><span
+                            class="text-xl  hidden md:block">Communities</span>
+                    </li>
+                    <li
+                        class="flex md:justify-start items-center gap-3 justify-center  mr-3 md:w-fit  hover:bg-gray-900 hover:font-semiboldbold hover:cursor-pointer px-5 py-1 hover:rounded-full">
+                        <span class="text-2xl material-symbols-outlined"> box </span><span
+                            class="text-xl  hidden md:block">Premium</span>
+                    </li>
+                    <li
+                        class="flex md:justify-start items-center gap-3 justify-center  mr-3 md:w-fit  hover:bg-gray-900 hover:font-semiboldbold hover:cursor-pointer px-5 py-1 hover:rounded-full">
+                        <span class="text-2xl material-symbols-outlined"> person </span><span
+                            class="text-xl  hidden md:block">Profile</span>
+                    </li>
+                    <li
+                        class="flex md:justify-start items-center gap-3 justify-center  mr-3 md:w-fit  hover:bg-gray-900 hover:font-semiboldbold hover:cursor-pointer px-5 py-1 hover:rounded-full">
+                        <span class="text-2xl material-symbols-outlined"> pending </span><span
+                            class="text-xl  hidden md:block">More</span>
+                    </li>
+                    <li>
+                        <div class="button w-full text-center my-4">
+                            <button
+                                class="hidden md:block bg-white px-20 text-xl rounded-full py-3 text-black">Post</button>
+                            <button
+                                class="md:hidden bg-white  px-2 md:px-4 text-xl rounded-full py-1 md:py-3 text-black">
+                                <span class="material-symbols-outlined">
+                                    edit
+                                </span>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="userprofile w-full mt-10  justify-end mx-10 hidden md:flex">
+                    <div
+                        class="item p-3 items-center gap-5 justify-end mx-5 flex mr-16  hover:bg-gray-800 cursor-pointer rounded-full w-fit">
+
+                        <div class="p1"><img class="w-12 h-12 rounded-2xl"
+                                src="https://avatars.githubusercontent.com/u/183563783?v=4" alt="vercel"></div>
+                        <div class="p2 ">
+                            <div>Mohammed Malik</div>
+                            <div class="text-gray-500">malik001</div>
+                        </div>
+
+                        <div class="p3 text-2xl">
+                            ...
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div
+            class="second w-full border-[1px] border-x-gray-600 border-y-black max-h-screen overflow-y-auto hide-scrollbar">
+            <!-- Top Section (For you and Following) -->
+            <div class="top flex p-3 sticky top-0 bg-black backdrop-blur-3xl opacity-80">
+                <div class="absolute w-14 h-1 rounded-full bg-blue-500 bottom-0 left-[19%]"></div>
+                <div class="left w-1/2 flex justify-center font-bold text-lg cursor-pointer">For you</div>
+                <div class="right w-1/2 flex justify-center font-bold text-lg cursor-pointer">Following</div>
+                <div class="settings mx-2">
+                    <span class="material-symbols-outlined cursor-pointer">settings</span>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="h-[1px] w-full bg-gray-700"></div>
+
+            <!-- Post Input Box -->
+            <div class="whats flex p-4 bg-black text-white rounded-xl w-full max-w-screen-md mx-auto">
+                <div class="img0 mt-2 rounded-full mr-3">
+                    <img src="https://avatars.githubusercontent.com/u/183563783?v=4"
+                        class="w-10 h-10 rounded-full" alt="User">
+                </div>
+                <div class="w-full">
+                    <input type="text" class="w-full bg-black h-7 my-2 text-white outline-none text-xl"
+                        placeholder="What is happening ?!" />
+                    <div class="text-blue-500 flex items-center mx-5 gap-2 w-full my-4">
+                        <span class="material-symbols-outlined">globe_asia</span>
+                        <span class="font-bold">Everyone can reply</span>
+                    </div>
+                    <div class="w-full h-[0.2px] bg-white my-3"></div>
+                    <div class="blueicons flex flex-wrap gap-2 text-blue-400 p-1">
+                        <span class="material-symbols-outlined cursor-pointer">image</span>
+                        <span class="material-symbols-outlined cursor-pointer">gif_box</span>
+                        <span class="material-symbols-outlined cursor-pointer">bolt</span>
+                        <span class="material-symbols-outlined cursor-pointer">page_info</span>
+                        <span class="material-symbols-outlined cursor-pointer">sentiment_satisfied</span>
+                        <span class="material-symbols-outlined cursor-pointer">calendar_clock</span>
+                        <span class="material-symbols-outlined cursor-pointer">location_on</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="w-full h-[0.2px] bg-gray-400 my-1"></div>
+
+            <!-- Posts Section -->
+            <div class="posts">
+                <!-- Post 1 -->
+                <div class="post flex p-4 bg-black text-white rounded-xl w-full max-w-screen-md mx-auto">
+                    <div class="img1 flex-shrink-0">
+                        <img src="https://pbs.twimg.com/profile_images/1594446880498401282/o4L2z8Ay_400x400.jpg"
+                            class="w-10 h-10 rounded-full" alt="Profile Image">
+                    </div>
+                    <div class="content flex-1 ml-3">
+                        <div class="flex items-center">
+                            <span class="font-bold hover:underline cursor-pointer">Cristiano Ronaldo</span>
+                            <span class="text-gray-500 ml-2">@Cristiano · Feb 14</span>
+                        </div>
+                        <div class="mt-1">My one and only Valentine. Always. 🫶</div>
+                        <div class="postings mt-3 rounded-lg overflow-hidden">
+                            <img src="https://pbs.twimg.com/media/GjvovbPWsAAw2Dq?format=jpg&name=900x900"
+                                class="rounded-lg w-full max-w-full" alt="Post Image">
+                        </div>
+                        <div class="likes text-gray-500 mt-2">
+                            <ul class="flex items-center space-x-4 flex-wrap justify-between">
+                                <li class="cursor-pointer hover:text-blue-300 flex items-center">
+                                    <span class="material-symbols-outlined text-xl mr-1">mode_comment</span>
+                                    <span class="text-sm">20K</span>
+                                </li>
+                                <li class="cursor-pointer hover:text-blue-300 flex items-center">
+                                    <span class="material-symbols-outlined text-xl mr-1">repeat</span>
+                                    <span class="text-sm">87K</span>
+                                </li>
+                                <li class="cursor-pointer hover:text-blue-300 flex items-center">
+                                    <span class="material-symbols-outlined text-xl mr-1">favorite</span>
+                                    <span class="text-sm">1.4M</span>
+                                </li>
+                                <li class="cursor-pointer hover:text-blue-300 flex items-center">
+                                    <span class="material-symbols-outlined text-xl mr-1">bar_chart_4_bars</span>
+                                    <span class="text-sm">157M</span>
+                                </li>
+                                <li class="flex items-center space-x-2">
+                                    <span
+                                        class="material-symbols-outlined cursor-pointer hover:text-blue-300">bookmark</span>
+                                    <span
+                                        class="material-symbols-outlined cursor-pointer hover:text-blue-300">upload</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Divider -->
+                <div class="w-full h-[0.2px] bg-gray-400 my-1"></div>
+
+                <!-- Another Post2 (repeat structure) -->
+                <div class="post flex p-4 bg-black text-white rounded-xl w-full max-w-screen-md mx-auto">
+                    <div class="img1 flex-shrink-0">
+                        <img src="https://pbs.twimg.com/profile_images/1562753500726976514/EPSUNyR3_400x400.jpg"
+                            class="w-10 h-10 rounded-full" alt="Profile Image">
+                    </div>
+                    <div class="content flex-1 ml-3">
+                        <div class="flex items-center">
+                            <span class="font-bold hover:underline cursor-pointer">Virat Kohli</span>
+                            <span class="text-gray-500 ml-2">@imVkohli
+                                · Feb 8</span>
+                        </div>
+                        <div class="mt-1">Too Yumm! Karare — har crunch mein masaledaar punch! 👊 Baked, not fried, with
+                            zero palm oil and 100% great taste—so you can snack without a second thought! 🙌
+                            Get yours now at your nearest stores or on leading e-commerce platforms! 🛒
+
+                            <div class="text-blue-600"> #TooYumm #TooYummKarare #TooNahiTohKuchNahi</div>
+                        </div>
+                        <div class="postings mt-3 rounded-lg overflow-hidden">
+                            <img src="https://pbs.twimg.com/media/GjQkKGIawAAYZAo?format=jpg&name=large"
+                                class="rounded-lg w-full max-w-full" alt="Post Image">
+                        </div>
+                        <div class="likes text-gray-500 mt-2">
+                            <ul class="flex items-center space-x-4 flex-wrap justify-between">
+                                <li class="cursor-pointer hover:text-blue-300 flex items-center">
+                                    <span class="material-symbols-outlined text-xl mr-1">mode_comment</span>
+                                    <span class="text-sm">20K</span>
+                                </li>
+                                <li class="cursor-pointer hover:text-blue-300 flex items-center">
+                                    <span class="material-symbols-outlined text-xl mr-1">repeat</span>
+                                    <span class="text-sm">87K</span>
+                                </li>
+                                <li class="cursor-pointer hover:text-blue-300 flex items-center">
+                                    <span class="material-symbols-outlined text-xl mr-1">favorite</span>
+                                    <span class="text-sm">1.4M</span>
+                                </li>
+                                <li class="cursor-pointer hover:text-blue-300 flex items-center">
+                                    <span class="material-symbols-outlined text-xl mr-1">bar_chart_4_bars</span>
+                                    <span class="text-sm">157M</span>
+                                </li>
+                                <li class="flex items-center space-x-2">
+                                    <span
+                                        class="material-symbols-outlined cursor-pointer hover:text-blue-300">bookmark</span>
+                                    <span
+                                        class="material-symbols-outlined cursor-pointer hover:text-blue-300">upload</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Divider -->
+                <div class="w-full h-[0.2px] bg-gray-400 my-1"></div>
+
+                <!-- Another Post3 (repeat structure) -->
+                <div class="post flex p-4 bg-black text-white rounded-xl w-full max-w-screen-md mx-auto">
+                    <div class="img1 flex-shrink-0">
+                        <img src="https://pbs.twimg.com/profile_images/1562753500726976514/EPSUNyR3_400x400.jpg"
+                            class="w-10 h-10 rounded-full" alt="Profile Image">
+                    </div>
+                    <div class="content flex-1 ml-3">
+                        <div class="flex items-center">
+                            <span class="font-bold hover:underline cursor-pointer">Virat Kohli</span>
+                            <span class="text-gray-500 ml-2">@imVkohli
+                                · Feb 8</span>
+                        </div>
+                        <div class="mt-1">Too Yumm! Karare — har crunch mein masaledaar punch! 👊 Baked, not fried, with
+                            zero palm oil and 100% great taste—so you can snack without a second thought! 🙌
+                            Get yours now at your nearest stores or on leading e-commerce platforms! 🛒
+
+                            <div class="text-blue-600"> #TooYumm #TooYummKarare #TooNahiTohKuchNahi</div>
+                        </div>
+                        <div class="postings mt-3 rounded-lg overflow-hidden border border-gray-600">
+                            <div class="">
+                                <blockquote class="twitter-tweet " data-media-max-width="560" >
+                                <p lang="en" dir="ltr">Calling all men, women, boys and girls.<br>I don&#39;t know how
+                                    many of you will agree with me.<br>But tell me what you think. Am I the only one
+                                    noticing the change in India?<br>🔗<a
+                                        href="https://t.co/td4GhhSeuq">https://t.co/td4GhhSeuq</a> <a
+                                        href="https://twitter.com/StayWrogn?ref_src=twsrc%5Etfw">@StayWrogn</a> <a
+                                        href="https://twitter.com/hashtag/LoveIsRespect?src=hash&amp;ref_src=twsrc%5Etfw">#LoveIsRespect</a>
+                                    <a
+                                        href="https://twitter.com/hashtag/StayWrogn?src=hash&amp;ref_src=twsrc%5Etfw">#StayWrogn</a>
+                                    <a
+                                        href="https://twitter.com/hashtag/RightKindOfMan?src=hash&amp;ref_src=twsrc%5Etfw">#RightKindOfMan</a>
+                                    <a href="https://t.co/6H2254tE1C">pic.twitter.com/6H2254tE1C</a></p>&mdash; Virat
+                                Kohli (@imVkohli) <a
+                                    href="https://twitter.com/imVkohli/status/1836291804825817599?ref_src=twsrc%5Etfw">September
+                                    18, 2024</a>
+                            </blockquote>
+                            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                            </div>
+                        </div>
+                        <div class="likes text-gray-500 mt-2">
+                            <ul class="flex items-center space-x-4 flex-wrap  justify-between">
+                                <li class="cursor-pointer hover:text-blue-300 flex items-center ">
+                                    <span class="material-symbols-outlined text-xl mr-1">mode_comment</span>
+                                    <span class="text-sm">5K</span>
+                                </li>
+                                <li class="cursor-pointer hover:text-blue-300 flex items-center">
+                                    <span class="material-symbols-outlined text-xl mr-1">repeat</span>
+                                    <span class="text-sm">36K</span>
+                                </li>
+                                <li class="cursor-pointer hover:text-blue-300 flex items-center">
+                                    <span class="material-symbols-outlined text-xl mr-1">favorite</span>
+                                    <span class="text-sm">1.3M</span>
+                                </li>
+                                <li class="cursor-pointer hover:text-blue-300 flex items-center">
+                                    <span class="material-symbols-outlined text-xl mr-1">bar_chart_4_bars</span>
+                                    <span class="text-sm">127M</span>
+                                </li>
+                                <li class="flex items-center space-x-2">
+                                    <span
+                                        class="material-symbols-outlined cursor-pointer hover:text-blue-300">bookmark</span>
+                                    <span
+                                        class="material-symbols-outlined cursor-pointer hover:text-blue-300">upload</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <div
+        class="second w-full border-[1px] border-x-gray-600 border-y-black max-h-screen overflow-y-auto hide-scrollbar">
+            <!-- Content goes here... -->
+
+
+
+            <!-- Positioned Section (Bolt Icon and Groke Text) -->
+            <div
+                class=" absolute bottom-0 right-0 flex items-center gap-2 w-35 px-2 font-bold py-2 text-black hover:cursor-pointer hover:bg-gray-500 hover:font-bold rounded-xl border-2 border-blue-500 shadow-lg hover:shadow-xl transition-all duration-300">
+                <span class="material-symbols-outlined text-2xl text-white">bolt</span>
+                <p class="text-white text-sm">Groke</p>
+            </div>
+
+
+
+
+            <!-- Search Section -->
+            <div class="search m-3">
+                <input type="text" class="w-2/3 rounded-full bg-gray-800 text-white px-4 py-2" placeholder="Search">
+            </div>
+
+            <!-- Subscribe Section -->
+            <div class="subscribe m-3 bg-[#16181c] w-2/3 py-4 rounded-xl space-y-3 border border-white">
+                <div class="item px-3 py-1">
+                    <h1 class="text-lg font-bold px-1 py-1">Subscribe to Premium</h1>
+                    <div class="text-sm text-gray-200 py-2">
+                        Subscribe to unlock new features and if eligible, receive a share of revenue.
+                    </div>
+                    <div
+                        class="sub bg-blue-500 hover:bg-blue-600 cursor-pointer font-bold items-center w-fit rounded-xl px-2 py-1">
+                        Subscribe
+                    </div>
+                </div>
+            </div>
+
+            <!-- What's Happening Section -->
+            <div class="what m-3 bg-[#16181c] w-2/3 py-5  rounded-xl space-y-3 border border-white">
+                <h1 class="font-bold px-3 ">What's Happening</h1>
+
+                <div class="item p-3  hover:bg-gray-800 cursor-pointer">
+                    <div class="text-sm text-gray-200">Trending in India</div>
+                    <div class="font-bold">#Chhaava</div>
+                    <div class="text-sm text-gray-200">32.7K posts</div>
+                </div>
+
+                <div class="item p-3  hover:bg-gray-800 cursor-pointer"> 
+                    <div class="text-sm text-gray-200">Sports . Trending</div>  
+                    <div class="font-bold">#ChampionsTrophy</div>
+                    <div class="text-sm text-gray-200">70.7K posts</div>
+                </div>
+
+                <div class="item p-3  hover:bg-gray-800 cursor-pointer"> 
+                    <div class="text-sm text-gray-200">Entertainment . Trending</div>  
+                    <div class="font-bold">#Sivakarthikeyan</div>
+                    <div class="text-sm text-gray-200">7,098 posts</div>
+                </div>
+                <div class="underline text-blue-400 hover:cursor-pointer p-3"> Show more</div>
+
+                <!-- Repeat the above structure for other items if needed -->
+
+            </div>
+
+            <!-- Who to Follow Section -->
+            <div class="who-to-follow m-3 bg-[#16181c] w-2/3 py-4 rounded-xl space-y-3 border border-white">
+                <h1 class="text-lg font-bold px-1 py-1">Who to Follow</h1>
+
+                <div class="flex items-center ">
+                    <div class="img rounded-2xl p-3">
+                        <img src="https://pbs.twimg.com/profile_images/1560652236770131968/0PcHHngJ_400x400.jpg"
+                            class="w-10 h-10 rounded-full" alt="Profile Image">
+                    
+                    </div>
+
+                    <div class="id p-3 mr-10">
+                        <div class="font-bold">Virender Sehwag</div>
+                        <div class="text-sm text-gray-200">@viredersehwag</div>
+                    </div>
+
+                    <div
+                        class="follow bg-white text-black hover:bg-gray-200 cursor-pointer font-bold items-center w-fit rounded-lg px-2 m-3 pt-2">
+                        Follow
+                    </div>
+
+                </div>
+                <div class="flex items-center ">
+                    <div class="img rounded-2xl p-3">
+                        <img src="https://pbs.twimg.com/profile_images/1594446880498401282/o4L2z8Ay_400x400.jpg"
+                            class="w-10 h-10 rounded-full" alt="Profile Image">
+                    
+                    </div>
+
+                    <div class="id p-3 mr-10">
+                        <div class="font-bold">Cristiano Ronaldo</div>
+                        <div class="text-sm text-gray-200">@Cristiano</div>
+                    </div>
+
+                    <div
+                        class="follow bg-white text-black hover:bg-gray-200 cursor-pointer font-bold items-center w-fit rounded-lg px-2 m-3 pt-2">
+                        Follow
+                    </div>
+
+                </div>
+                <div class="underline text-blue-400 hover:cursor-pointer p-3"> Show more</div>
+
+            </div>
+
+            <!-- Footer Links Section -->
+            <div class="text-white w-2/3 text-sm p-1 m-1 flex">
+                <div class="mt-2 cursor-pointer hover:text-blue-500">Terms And Conditions</div>
+                <div class="mt-2 ml-2 cursor-pointer hover:text-blue-500">Privacy Policy</div>
+
+            </div>
+
+            <div class="text-white w-2/3 text-sm p-1 m-1 flex">
+                <div class="mt-2 cursor-pointer hover:text-blue-500">Cookie Policy</div>
+                <div class="mt-2 ml-2 cursor-pointer hover:text-blue-500">Ads info</div>
+                <div class="mt-2 ml-2 cursor-pointer hover:text-blue-500">More @2025 X Crop</div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
